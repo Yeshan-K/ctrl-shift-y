@@ -16,6 +16,40 @@ const { isWide = false } = Astro.props
   <Head>
     <slot name="head" />
   </Head>
+
+  <style>
+    body {
+      overflow-y: auto;
+      padding-left: 10px;
+      scrollbar-color: #353535 transparent;
+    }
+
+    * {
+      scrollbar-color: #353535 transparent;
+      scrollbar-3dlight-color: transparent;
+      scrollbar-gutter: stable;
+    }
+
+    *::-moz-scrollbar {
+      width: 10px;
+      background: transparent;
+    }
+
+    *::-moz-scrollbar-thumb {
+      background: #353535;
+      border-radius: 2px;
+    }
+
+    *::-webkit-scrollbar {
+      width: 10px;
+      background: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background: #353535;
+      border-radius: 2px;
+    }
+  </style>
   <body>
     <div class="flex h-fit min-h-screen flex-col gap-y-6 font-sans">
       <Header />
